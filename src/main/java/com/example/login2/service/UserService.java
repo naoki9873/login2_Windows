@@ -8,6 +8,7 @@ import com.example.login2.repository.UserRepository;
 
 @Service
 public class UserService {
+    
     @Autowired
     private UserRepository userRepository;
 
@@ -18,4 +19,11 @@ public class UserService {
         user.setRole("ROLE_USER");
         return userRepository.save(user);
     }
+    
+    
+    public AppUser findByUsername(String username) {
+        return userRepository.findByUsername(username)
+                             .orElse(null);
+    }
+
 }

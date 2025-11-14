@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>食事登録</title>
+</head>
+<body>
+<h2>食事登録</h2>
+
+<form action="/meal/create" method="post">
+    <label>種類：</label>
+    <select name="mealType">
+        <option value="朝">朝</option>
+        <option value="昼">昼</option>
+        <option value="夜">夜</option>
+    </select>
+    <br><br>
+
+    <label>カロリー：</label>
+    <input type="number" name="calories">
+    <br><br>
+
+    <label>メモ：</label>
+    <input type="text" name="memo">
+    <br><br>
+
+    <button type="submit">保存</button>
+</form>
+
+<br>
+<a href="/meal/list">一覧へ戻る</a>
+<a href="/home">ホーム</a>
+
+</body>
+</html>
