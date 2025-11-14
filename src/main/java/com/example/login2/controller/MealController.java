@@ -37,6 +37,7 @@ public class MealController {
     public String createMeal(@RequestParam String mealType,
                              @RequestParam int calories,
                              @RequestParam String memo,
+                             @RequestParam String foodName,
                              @AuthenticationPrincipal org.springframework.security.core.userdetails.User loginUser) {
 
         // ログイン中のユーザー取得
@@ -46,6 +47,7 @@ public class MealController {
         meal.setMealType(mealType);
         meal.setCalories(calories);
         meal.setMemo(memo);
+        meal.setFoodName(foodName);  
         meal.setDate(LocalDate.now());
         meal.setUser(user);
 

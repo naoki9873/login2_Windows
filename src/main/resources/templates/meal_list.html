@@ -9,6 +9,7 @@
 
 <table border="1">
     <tr>
+		<th>食べ物</th>
         <th>日付</th>
         <th>種類</th>
         <th>カロリー</th>
@@ -16,6 +17,7 @@
     </tr>
 
     <tr th:each="m : ${meals}">
+		<td th:text="${m.foodName}"></td>
         <td th:text="${m.date}"></td>
         <td th:text="${m.mealType}"></td>
         <td th:text="${m.calories}"></td>

@@ -20,6 +20,9 @@ public class Meal {
     private int calories;      // カロリー
     private String memo;       // メモ
     private LocalDate date;    // 日付
+    private String foodName;
+
+    
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -72,5 +75,13 @@ public class Meal {
 
     public void setUser(AppUser user) {
         this.user = user;
+    }
+    
+    public String getFoodName() {
+        return foodName;
+    }
+
+    public void setFoodName(String foodName) {
+        this.foodName = foodName;
     }
 }
